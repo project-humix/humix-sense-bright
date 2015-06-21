@@ -54,7 +54,7 @@ while True:
     #print "Temp  : ",temp_data, " (",temp_volts ,"V) -->",temp,"~C    Light : ",light_data," (",light_volts,"V)"
     print "Light:",light_data
 
-    data = '{"sensor":"bright", "value":' + str(light_data) + '}'
+    data = '{ "brightness" :' + str(light_data) +'}'
 
    # Simple Publisher
     c.publish('humix.sense.brightness.event', data)
